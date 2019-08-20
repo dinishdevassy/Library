@@ -5,8 +5,7 @@
 		<meta charset="utf-8">
 		<title>Library</title>
 		<meta name="generator" content="Bootply" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <base href="/">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 		<!--[if lt IE 9]>
@@ -91,30 +90,44 @@
           
           
           <!--/stories-->
-         
-          <div class="row">    
-            <br>
-            <div class="col-md-2 col-sm-3 text-center">
-              <a class="story-title" href="#"><img alt="Not Found" src= " <%=bookdetail[0].image%> "style="width:100px;height:100px" class="img-circle"></a>
-            </div>
-            <div class="col-md-10 col-sm-9">
-              <h3> <%= bookdetail[0].name%></h3>
+          <form action="/users/newuser" method="POST">
+          <div class="container">
               <div class="row">
-                <div class="col-xs-9">
-                  <h4><span class="label label-default"><%=bookdetail[0].Author%></span></h4><h4>
-                  <small style="font-family:courier,'new courier';" class="text-muted"><%=bookdetail[0].category%>  • </small>
-                  </h4></div>
-                <div class="col-xs-3"></div>
+                  <div class="col col-4 col-sm-4">
+                      <table >
+                        <tr>
+                            <td>FirstName</td>
+                            <td><input type="text" class="form-control" name="fname" id="fname" style="margin: 10px" required></td>
+                        </tr>
+                        <tr>
+                            <td>UserName</td>
+                            <td><input type="text" class="form-control" name="uname" id="uname" style="margin: 10px" required></td> 
+                        </tr> 
+                        <tr>
+                            <td>password</td> 
+                            <td><input type="password" class="form-control" name="pswd" id="pswd" style="margin: 10px" required></td>
+                        </tr> 
+                        <tr>
+                            <td>Role</td>
+                            <td>
+                                <select name="role" id="" class="form-control"style="margin: 10px" required>
+                                    <option value="select">--Select</option>
+                                    <option value="admin">Admin</option>
+                                    <option value="user">User</option>
+                                </select> 
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <input type="submit" value="Submit" class=" btn btn-success">
+                            </td>
+                        </tr>
+                    </table>     
+                  </div>
               </div>
-              <br><br>
-            </div>
           </div>
-          <hr>
-          
-         
-         
-          <hr>
-          <!--/stories-->
+        </form>
           
           
           <a href="/" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a>
